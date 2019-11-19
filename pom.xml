@@ -6,6 +6,13 @@
   <packaging>war</packaging>
   <name>AirBnbWebApp</name>
   <description>Sample AirBnB Application</description>
+  <dependencies>
+        <dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>javax.servlet-api</artifactId>
+    		<version>3.1.0</version>
+		</dependency>
+  </dependencies>      
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
