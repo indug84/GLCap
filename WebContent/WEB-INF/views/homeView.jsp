@@ -14,7 +14,7 @@
       <h3>Home Page</h3>
       
       Welcome to AirBnB Web application<br><br>
-      <b>It includes the following functions:</b>
+      <b>It includes the following functions</b>
       <ul>
          <li>Login</li>
          <li>Storing user information in cookies</li>
