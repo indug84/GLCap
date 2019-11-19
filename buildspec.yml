@@ -31,5 +31,6 @@ phases:
 artifacts:
       files:
         - Dockerfile
+        - imagedefinitions.json
         - target/AirBnbWebApp.0.0.1-SNAPSHOT.war
         
