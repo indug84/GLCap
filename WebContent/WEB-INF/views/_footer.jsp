@@ -4,6 +4,6 @@
 <div
   style="background: #E0E0E0; text-align: center; padding: 5px; margin-top: 10px;">
   
-  Welcome to AirBnb.
+  Welcome to AirBnb Version 1.
   
 </div>
