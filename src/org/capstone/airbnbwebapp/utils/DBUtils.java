@@ -15,7 +15,7 @@ public class DBUtils {
     public static UserAccount findUser(Connection conn, //
             String userName, String password) throws SQLException {
  
-        String sql = "Select a.User_Name, a.Password, a.Gender from User_Account a " //
+        String sql = "Select a.User_Name, a.Password, a.Gender from airbnb.User_Account a " //
                 + " where a.User_Name = ? and a.password= ?";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
@@ -36,7 +36,7 @@ public class DBUtils {
  
     public static UserAccount findUser(Connection conn, String userName) throws SQLException {
  
-        String sql = "Select a.User_Name, a.Password, a.Gender from User_Account a "//
+        String sql = "Select a.User_Name, a.Password, a.Gender from airbnb.User_Account a "//
                 + " where a.User_Name = ? ";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
@@ -57,7 +57,7 @@ public class DBUtils {
     }
  
     public static List<Hotel> queryHotel(Connection conn) throws SQLException {
-        String sql = "Select a.Code, a.Name, a.Area, a.City, a.State, a.Country, a.Price, a.Zip, a.Pin from hotel a ";
+        String sql = "Select a.Code, a.Name, a.Area, a.City, a.State, a.Country, a.Price, a.Zip, a.Pin from airbnb.hotel a ";
         PreparedStatement pstm = conn.prepareStatement(sql);
  
         ResultSet rs = pstm.executeQuery();
@@ -92,7 +92,7 @@ public class DBUtils {
     }
  
     public static Hotel findHotel(Connection conn, String code) throws SQLException {
-        String sql = "Select a.Code, a.Name, a.Area, a.City, a.State, a.Country, a.Price, a.Zip, a.Pin from Hotel a where a.Code=?";
+        String sql = "Select a.Code, a.Name, a.Area, a.City, a.State, a.Country, a.Price, a.Zip, a.Pin from airbnb.Hotel a where a.Code=?";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, code);
@@ -115,7 +115,7 @@ public class DBUtils {
     }
  
     public static void updateHotel(Connection conn, Hotel hotel) throws SQLException {
-        String sql = "Update Hotel set Name =?, Price=? where Code=? ";
+        String sql = "Update airbnb.Hotel set Name =?, Price=? where Code=? ";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
  
@@ -126,7 +126,7 @@ public class DBUtils {
     }
  
     public static void insertHotel(Connection conn, Hotel hotel) throws SQLException {
-        String sql = "Insert into Hotel(Code, Name, Area, City, State, Country, Price, Zip, Pin) values (?,?,?,?,?,?,?,?,?)";
+        String sql = "Insert into airbnb.Hotel(Code, Name, Area, City, State, Country, Price, Zip, Pin) values (?,?,?,?,?,?,?,?,?)";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
  
@@ -144,7 +144,7 @@ public class DBUtils {
     }
  
     public static void deleteHotel(Connection conn, String code) throws SQLException {
-        String sql = "Delete From Hotel where Code= ?";
+        String sql = "Delete From airbnb.Hotel where Code= ?";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
  
